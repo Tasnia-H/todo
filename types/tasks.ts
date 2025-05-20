@@ -1,4 +1,6 @@
 export interface ITask {
   id: string,
-  text: string
+  title: string,
+  description: string,
+  deadline?: string | null
 }
