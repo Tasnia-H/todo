@@ -1,8 +1,8 @@
 import { getAllTodos } from "@/api";
+import Navbar from "@/app/components/Navbar";
+import { auth } from "@/auth";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { auth } from "@/auth";
-import Navbar from "@/app/components/Navbar";
 
 async function getTaskById(id: string) {
   const tasks = await getAllTodos();
@@ -10,12 +10,13 @@ async function getTaskById(id: string) {
 }
 
 export default async function TaskPage({ params }: { params: { id: string } }) {
-  const task = await getTaskById(params.id);
-  const session = await auth();
+  const task = await getTaskById(params.id); //task:object|undefined
 
   if (!task) {
     notFound();
   }
+
+  const session = await auth();
 
   return (
     <main className="max-w-4xl mx-auto p-4">
@@ -50,9 +51,7 @@ export default async function TaskPage({ params }: { params: { id: string } }) {
           </div>
         </div>
       ) : (
-        <div className="text-center mt-10">
-          <h2 className="text-xl">Please login to view task details</h2>
-        </div>
+        <></>
       )}
     </main>
   );

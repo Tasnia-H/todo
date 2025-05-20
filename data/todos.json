@@ -1,3 +1,10 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "id": "f8901fbd-a055-419d-9167-9850d815c52d",
+      "title": "Maths",
+      "description": "Do HW",
+      "deadline": "2025-05-23T18:00:00.000Z"
+    }
+  ]
 }
