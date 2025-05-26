@@ -18,6 +18,18 @@ const Navbar = async () => {
           {session && session?.user ? (
             <>
               <NavigationMenuItem>
+                <Link href="/" className="py-2">
+                  <NavigationMenuLink>Home</NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/form" className="py-2">
+                  <NavigationMenuLink>Feedback</NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <Link href={`/user/${session?.user?.id}`} className="py-2">
                   <NavigationMenuLink>{session?.user?.name}</NavigationMenuLink>
                 </Link>
