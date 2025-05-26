@@ -19,7 +19,7 @@ export default async function TaskPage({ params }: { params: { id: string } }) {
   const session = await auth();
 
   return (
-    <main className="max-w-4xl mx-auto">
+    <main className="max-w-4xl mx-auto pt-2 px-20 h-screen bg-white">
       <Navbar />
 
       {session ? (

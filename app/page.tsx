@@ -9,7 +9,7 @@ export default async function Home() {
   const tasks = await getAllTodos();
 
   return (
-    <main className="max-w-4xl mx-auto">
+    <main className="max-w-4xl mx-auto pt-2 px-20 h-screen bg-white">
       <Navbar />
       {session ? (
         <>

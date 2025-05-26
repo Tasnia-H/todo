@@ -5,6 +5,12 @@
       "title": "Maths",
       "description": "Do HW",
       "deadline": "2025-05-23T18:00:00.000Z"
+    },
+    {
+      "id": "a6a60663-b838-4a0c-adf2-2bc6b9143e83",
+      "title": "English",
+      "description": "Practice speaking",
+      "deadline": "2025-05-29T18:00:00.000Z"
     }
   ]
 }
